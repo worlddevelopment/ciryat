@@ -124,11 +124,32 @@ div h2 + p
 
 h1
 {
+	color: white;
 	font-size: 3rem;
 	line-height: 2.5rem;
-	text-align: left;
+	text-align: center;
 	font-weight: normal;
 	text-shadow: .05rem .05rem .1rem black;
+}
+
+h1::before
+,h1::after
+{
+	background-repeat: no-repeat;
+	content: "";
+	display: inline-block;
+	height: 64px;
+	position: relative;
+	top: 14px;
+	width: 32px;
+}
+h1::before
+{
+	background-image: url('../images/unicorn_mini_black.png');
+}
+h1::after
+{
+	background-image: url('../images/unicorn_mini_white.png');
 }
 
 h3
@@ -1159,7 +1180,6 @@ figcaption::before
 
 .vertical_bar
 {
-	background-image: url("../images/panorama.png");
 	background-repeat: no-repeat;
 	background-position: bottom;
 	background-size: 100%;
