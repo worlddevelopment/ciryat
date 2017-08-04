@@ -29,13 +29,13 @@
 		$directory = $_GET['type'];
 	}
 	// Reduce risk by limiting possible characters as a file path is built from it.
-	$directory = preg_replace('/[^-A-Za-z_.]', '', $directory) . '/';
+	$directory = preg_replace('/[^-A-Za-z_.]/', '', $directory) . '/';
 
 	// Determine filename
 	$filename = 'home';
 	if (!empty($_GET['id']))
 	{
-		$filename = preg_replace('/[^-A-Za-z_.]', '', $_GET['id']);
+		$filename = preg_replace('/[^-A-Za-z_.]/', '', $_GET['id']);
 		//$ending = '.php'; convention to use only .php renders this code obsolete
 		//if (!endsWith($file, $ending)
 		//{
