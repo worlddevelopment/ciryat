@@ -40,8 +40,5 @@ require_once("./body.tpl.php");
 <div class="vertical_bar">
 </div>
 
-<script type="text/javascript" src="./js/site.js"></script>
-<script type="text/javascript" src="./js/title-animation.js"></script>
-
 </body></html>
 
