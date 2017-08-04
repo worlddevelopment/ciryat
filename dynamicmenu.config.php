@@ -180,7 +180,7 @@ $endMode = 'l';
 $path = './';
 $type = 'allget'; # {all|files|dir}get <=> what to phpInclude
 $circular = true;
-$origin = ['38%', '50%'];
+$origin = ['38%', '48%'];
 $radius = 33;
 $unit = '%';
 
