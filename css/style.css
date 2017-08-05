@@ -833,6 +833,20 @@ figcaption::before
 	text-shadow: 1px 0px 1px black;
 }
 
+ul#links
+{
+	position: fixed;
+	right: 3rem;
+	bottom: 0;
+	padding: .5rem;
+	list-style: none;
+	text-align: right;
+}
+
+ul#links img
+{
+	width: 1rem;
+}
 
 
 
