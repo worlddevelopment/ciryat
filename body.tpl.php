@@ -65,15 +65,7 @@
 ?>
 	<!-- PAGE CONTENT -->
 	<div id="content" class="limitImageSize <?php echo htmlspecialchars($filename) ?>">
-	<?php
-	if ($_GET['id'] != 'home' && $_GET['id'] != '.home' && $_GET['id'] != '#home')
-	{
-		?>
-			<h1 class="title">
-				<?php echo toFairy($_GET['id']) ?>
-			</h1>
-		<?php
-	}
+<?php
 
 	// Load
 	require($file);
