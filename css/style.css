@@ -685,7 +685,6 @@ form#fullHolder section span
 
 div#thumbHolder
 {
-	height: 3rem;
 	width: 98%;
 	text-align: center;
 	overflow: hidden;
@@ -702,7 +701,6 @@ div#thumbHolder a
 div#thumbHolder ul
 {
 	float: right;
-	height: 4rem;
 	padding: 0;
 	margin: 0;
 	list-style: none;
