@@ -13,7 +13,7 @@
 	<meta name="revisit-after" content="1 Day" />
 	<meta name="Language" content="English" />
 	<meta name="Content-Language" content="en" />
-	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="shortcut icon" href="images/unicorn_love.png">
 	<link rel="stylesheet" href="./css/style.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="./css/fairyclasses.css" type="text/css" media="screen">
 	<style>
