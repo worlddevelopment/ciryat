@@ -12,7 +12,7 @@ html {
 
 body
 {
-	background-image: url("../images/horses.jpg");
+	background-image: url("../images/skytree_atmosphere_seamless.jpg");
 	color: white;
 	text-shadow: .05rem .05rem .1rem black;
 	font-family: 'Open Sans', 'SourceSansPro', 'Verdana', 'Arial', sans-serif;
@@ -685,7 +685,7 @@ form#fullHolder section span
 
 div#thumbHolder
 {
-	width: 98%;
+	width: 93%;
 	text-align: center;
 	overflow: hidden;
 	padding-top: 1rem;
@@ -756,7 +756,6 @@ div#thumbHolder li:last-child
 	height: 141px;
 	text-align: center;
 	text-shadow: none;
-	width: 100px;
 }
 .logo:hover
 {
