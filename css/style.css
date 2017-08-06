@@ -14,7 +14,7 @@ body
 {
 	background-image: url("../images/skytree_atmosphere_seamless.jpg");
 	color: white;
-	text-shadow: .05rem .05rem .1rem black;
+	text-shadow: 1px 1px 1px black;
 	font-family: 'Open Sans', 'SourceSansPro', 'Verdana', 'Arial', sans-serif;
 	font-size: 1.0rem;
 	line-height: 1.2rem;
@@ -54,7 +54,7 @@ section:nth-of-type(2n+1)
 ,section:nth-of-type(2n+1) a
 {
 	color: black;
-	text-shadow: .02rem .02rem .01rem white;
+	text-shadow: 1px 1px 2px white;
 }
 
 section:nth-of-type(2n)
@@ -109,6 +109,8 @@ div h2 + p
 
 .container
 {
+	font-size: 1.4rem;
+	line-height: 1.6rem;
 	margin: auto;
 	overflow: hidden;
 	padding: 0;
@@ -130,6 +132,15 @@ h1
 	font-weight: normal;
 	text-shadow: .05rem .05rem .1rem black;
 }
+
+h2
+,sup
+h2 ~ div
+{
+	color: black;
+	text-shadow: 1px 1px 1px white;
+}
+
 
 h1::before
 ,h1::after
@@ -261,16 +272,16 @@ span.arrow {
 	background-color: royalblue;
 }
 #main-nav li:nth-child(5n+2) {
-	background-color: ;
+	background-color: cornflowerblue;
 }
 #main-nav li:nth-child(5n+3) {
-	background-color: tan;
+	background-color: olivedrab;
 }
 #main-nav li:nth-child(5n+4) {
-	background-color: goldenrod;
+	background-color: yellowgreen;
 }
-#main-nav li:nth-child(5n+4) {
-	background-color: purple;
+#main-nav li:nth-child(5n+5) {
+	background-color: hotpink;
 }
 #main-nav li.current
 {
