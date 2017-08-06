@@ -6,33 +6,10 @@
 
 
 
-//------- SETTINGS ---------------------------------------------//
-# RESEARCHER
-$dozent = $wissenschaftler = 'Researcher';
-$email = 'researcher&lt;at&gt;ciry.at';
-$tel = '+49 (0)000 -[no phone]';
-$fax = '+49 (0)000 -[no fax]';
-
-# PAGE
-$ownSheets = array('css/additionalclasses.css','../fairyclasses.css');
-$ownScripts = array('js/func.js');
-$charset = 'utf-8'; #'iso-8859-1';
-
 # START PAGE
 $startEN = 'index.php'; // HACK: If home is a directory, then home/index.php is loaded and the check then is index in startPages in DynamicMenu.class.php
 $startDE = 'index.php';
 
-# YOUR ORGANIZATION
-$lehrstuhl = 'Lehrstuhl II';
-$lehrstuhlHomepage = 'http://www2.mathematik.uni-wuerzburg.de/';
-$chair = 'Chair II';
-$chairHomepage = 'http://www2.mathematik.uni-wuerzburg.de/?lang=en';
-
-
-
-
-
-// MENU -----------
 # EXCEPTIONS
 $e = array(
 	'index.php',
@@ -153,25 +130,16 @@ $e = array(
 ,'robots.txt'
 ,'shell__aimeos_release_script'
 ,'tags.inc.php'
+,'treasury'
 ,'typo2_src-7.5.0'
 ,'typo3_src-7.6.10'
 ,'typo3_src-8.7.0'
 ,'uni'
+,'web'
 ,'worlddevelopment'
 );
 
 
-# ELEMENTS on/off  --//to disable set to FALSE:
-$impressum = true;
-$quicknav = true;
-$quicklinks = false;
-$ownquicklinks = false;
-$ownquickhtml = '<ul class="a_class">'  // Simply copy next line:
-		.'<li>'/*.extlink('example', 'http://example.ip/', false, true)*/.'</li>'
-		.'</ul>';
-
-
-# DYNAMIC MENU SETTINGS
 $recursive  = true;
 $shortIDs   = true;
 $end = false;
@@ -191,38 +159,24 @@ $homeAlwaysAtTop = true;
 $menuMap = array('Home', 'Seashark');  #Test
 $translate = true;
 // To get 1click-language-switch to work even with distinct file
-//names per language: uncomment, map the corresponding files:
-#$translate = array('en_file'=>'de_file','english'=>'englisch','german'=>'deutsch');
+// names per language: uncomment, map the corresponding files:
+/*
+$translate = array(
+	'en_file'=>'de_file','english'=>'englisch','german'=>'deutsch'
+);
+*/
+
 
 
 # STATIC MENU ENTRIES (e.g. http://<server>.<ending>)
 $staticEntries = array(
 	//'static file'=>'./.hidden_file.ending'
-	'websites'=>'.websites'
+	'web'=>'web'
 	,'treasury'=>'treasury'
 );
 if (isset($language) && $language == 'en') {
 	//$staticEntries = array('static entry'=>'http://server.ip/');
 }
-
-
-# FOOTER HTML
-$footer = true;
-$footerText = 'Dynamic Menu';
-$footerUrl = 'http://ciry.at/HiWi/seashark/?id=dynamic_menu';
-$footerClasses = '';
-$dynMenuContact = 'contact i@ciry.at for Dynamic Menu';
-$footerHTML = '<a href="'.$footerUrl.'" class="'.$footerClasses.'"'
-			  .' title="'.$dynMenuContact.'">'.$footerText.'</a>';
-
-
-
-
-
-
-
-
-
 
 
 
@@ -233,14 +187,7 @@ $footerHTML = '<a href="'.$footerUrl.'" class="'.$footerClasses.'"'
 MODIFY WITH CAUTION if non-default behaviour is desired.
 Uncomment if desired (remove '#' or '//' at line start.
 */
-$title = $wissenschaftler;
-#$title = '<custom title>';
-
-#$impressumUrl = '?id=impressum.html';  # Is already the default.
-// impressum.html exists in both English(en-), German(de-folder).
-
-
-//SET START IF ONLY ONE IS SET
+// One language start page set suffices
 $start = false;
 if (!empty($startEN) && !$startDE) {
 	$start = $startEN;
@@ -258,20 +205,4 @@ if (isset($menuMap)
 }
 
 
-
-
-
-//------- VALIDATION-TESTs ------------------------------------//
-
-if (!is_bool($impressum)) {
-	$impressum = false;  #only {true|false} is possible
-}
-
-
-
-
-
-
-
 ?>
-
