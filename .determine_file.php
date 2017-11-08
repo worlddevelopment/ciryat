@@ -38,11 +38,13 @@
 	{
 		if (strpos('.', $filename) !== 0)
 		{
-			$file = './'.$directory.$filename.$loggedInAddition.'.php';
+			// tried hidden file, toggle (add dot)
+			$file = './'.$directory.'.'.$filename.$loggedInAddition.'.php';
 		}
 		else
 		{
-			$filename = substr($filename, 1);
+			// toggle (remove dot)
+			$file = './'.$directory.'.'.substr($filename, 1).$loggedInAddition.'.php';
 		}
 		if (!file_exists($file))
 		{
