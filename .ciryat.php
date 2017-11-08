@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="A world development open eco club with board ethics instead of hierarchies." />
-	<meta name="keywords" content="free, open, economy, ecology, technology, machines, bots, security" />
+	<meta name="keywords" content="ciryat, free, open, economy, ecology, technology, machines, bots, security" />
 	<meta name="audience" content="All" />
 	<meta name="author" content="worlddevelopment" />
 	<meta name="publisher" content="worlddevelopment" />
