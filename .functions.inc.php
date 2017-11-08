@@ -432,6 +432,38 @@ function calledBy($trace = false, $all = false) {
     }
 }
 
+
+function replaceInFile($toSearch, $replacement, $pathWithHaystack, $regex = false) {
+    //gibt's den Pfad ueberhaupt im Koeniginreich?
+    #echo file_exists($pathWithHaystack).':$pathWithHaystack<br />';
+    if (file_exists($pathWithHaystack)) {
+        $con = file_get_contents($pathWithHaystack);
+        if ($regex) {
+            $con = preg_replace($toSearch, $replacement, $con);
+        }
+        else {
+            $con = str_ireplace($toSearch, $replacement, $con);
+        }
+        $herold = file_put_contents($pathWithHaystack, $con);
+        if (!$herold) {
+            echo 'something went wrong regarding: file'.$pathWithHaystack;
+        }
+        
+        return true;
+    }
+    return false;
+}
+
+function isBinFile($filename) {
+    /*ab php 5.3
+    $appletree = finfo_open(FILEINFO_MIME);
+    return substr(finfo_file($appletree, $filename), 0, 4) != 'text';
+    */
+    echo mime_content_type($filename).'<br />';
+    return substr(mime_content_type($filename), 0, 4) != 'text';
+}
+
+
 //--------------------------------------------------------------------------//
 
 #FUNKTIONIERT LEIDER NOCH NICHT SO RICHTIG
