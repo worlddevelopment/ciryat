@@ -12,7 +12,7 @@ html {
 
 body
 {
-	background-image: url("../images/skytree_atmosphere_seamless.jpg");
+	background-image: url("../.images/skytree_atmosphere_seamless.jpg");
 	color: white;
 	text-shadow: 1px 1px 1px black;
 	font-family: 'Open Sans', 'SourceSansPro', 'Verdana', 'Arial', sans-serif;
@@ -155,11 +155,11 @@ h1::before
 }
 h1::before
 {
-	background-image: url('../images/unicorn_mini_black.png');
+	background-image: url('../.images/unicorn_mini_black.png');
 }
 h1::after
 {
-	background-image: url('../images/unicorn_mini_white.png');
+	background-image: url('../.images/unicorn_mini_white.png');
 }
 
 h3
@@ -449,7 +449,7 @@ span.arrow {
 	font-size:16px;
 	z-index: 1;
 	font-family: 'NovecentowideLightRegular';
-	background-image: url("../images/i8_logo.png");
+	background-image: url("../.images/i8_logo.png");
 	background-repeat: no-repeat;
 	background-size: 40%;
 }
@@ -634,7 +634,7 @@ form#fullHolder section
 /* opposite order to as only succeding nodes can be selected via css */
 form#fullHolder section:nth-of-type(3)
 {
-	background-image: url(../images/worlddevelopment_nested.png);
+	background-image: url(../.images/worlddevelopment_nested.png);
 	top: 0%;
 	filter: alpha(opacity=100);
 	opacity: 1;
@@ -645,11 +645,11 @@ form#fullHolder section:nth-of-type(2)
 	top: 106%;
 	filter: alpha(opacity=100);
 	opacity: 1;
-	z-index: 200;
+	z-index: 211;
 }
 form#fullHolder section:nth-of-type(1)
 {
-	top: 213%;
+	top: 210%;
 	filter: alpha(opacity=100);
 	opacity: 1;
 	z-index: 100;
@@ -664,7 +664,7 @@ form#fullHolder input
 form#fullHolder input:checked + section
 {
 	position: fixed;
-	top: 0%;
+	top: 0;
 	filter: alpha(opacity=100);
 	opacity: 1;
 	z-index: 1001;
@@ -770,7 +770,7 @@ div#thumbHolder li:last-child
 
 .logo
 {
-	background-image: url("../images/worlddevelopment.png");
+	background-image: url("../.images/worlddevelopment.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 	color: transparent;
@@ -781,7 +781,7 @@ div#thumbHolder li:last-child
 }
 .logo:hover
 {
-	background-image: url("../images/worlddevelopment_inverted.png");
+	background-image: url("../.images/worlddevelopment_inverted.png");
 	color: white;
 	text-shadow: 0px 0px 1px white;
 }
@@ -849,7 +849,7 @@ ul#links
 {
 	position: fixed;
 	right: 3rem;
-	bottom: 0;
+	bottom: .25rem;
 	padding: .5rem;
 	list-style: none;
 	text-align: right;
@@ -858,6 +858,13 @@ ul#links
 ul#links img
 {
 	width: 1rem;
+}
+
+ul#links + ul
+{
+	position: fixed;
+	bottom: -.5rem;
+	left: 1rem
 }
 
 
@@ -1089,6 +1096,10 @@ ul#links img
 
 
 /* HEIGHT DEPENDENT */
+	section div.overflowy
+	{
+		overflow-y: auto;
+	}
 @media (max-height:400px)
 {
 	section
@@ -1099,6 +1110,24 @@ ul#links img
 	{
 		margin-top: 100px;
 	}
+	section div.overflowy
+	{
+		height: 300px;
+	}
+/*
+	form#fullHolder section:nth-of-type(3)
+	{
+		top: 0%;
+	}
+	form#fullHolder section:nth-of-type(2)
+	{
+		top: 400px;
+	}
+	form#fullHolder section:nth-of-type(1)
+	{
+		top: 800%;
+	}
+*/
 }
 @media (min-height:400px) and (max-height:500px)
 {
@@ -1109,6 +1138,10 @@ ul#links img
 	#title
 	{
 		margin-top: 200px;
+	}
+	section div.overflowy
+	{
+		height: 300px;
 	}
 }
 @media (min-height:500px) and (max-height:600px)
@@ -1121,6 +1154,10 @@ ul#links img
 	{
 		margin-top: 300px;
 	}
+	section div.overflowy
+	{
+		height: 400px;
+	}
 }
 @media (min-height:600px) and (max-height:700px)
 {
@@ -1131,6 +1168,10 @@ ul#links img
 	#title
 	{
 		margin-top: 400px;
+	}
+	section div.overflowy
+	{
+		height: 400px;
 	}
 }
 @media (min-height:700px) and (max-height:800px)
@@ -1143,6 +1184,10 @@ ul#links img
 	{
 		margin-top: 500px;
 	}
+	section div.overflowy
+	{
+		height: 500px;
+	}
 }
 @media (min-height:800px) and (max-height:900px)
 {
@@ -1153,6 +1198,10 @@ ul#links img
 	#title
 	{
 		margin-top: 600px;
+	}
+	section div.overflowy
+	{
+		height: 600px;
 	}
 }
 @media (min-height:900px) and (max-height:1000px)
@@ -1165,6 +1214,10 @@ ul#links img
 	{
 		margin-top: 700px;
 	}
+	section div.overflowy
+	{
+		height: 700px;
+	}
 }
 @media (min-height:1000px) and (max-height:1100px)
 {
@@ -1175,6 +1228,10 @@ ul#links img
 	#title
 	{
 		margin-top: 800px;
+	}
+	section div.overflowy
+	{
+		height: 800px;
 	}
 }
 @media (min-height:1100px) and (max-height:1200px)
@@ -1187,6 +1244,10 @@ ul#links img
 	{
 		margin-top: 900px;
 	}
+	section div.overflowy
+	{
+		height: 900px;
+	}
 }
 @media (min-height:1200px) and (max-height:1300px)
 {
@@ -1198,6 +1259,10 @@ ul#links img
 	{
 		margin-top: 1000px;
 	}
+	section div.overflowy
+	{
+		height: 1000px;
+	}
 }
 @media (min-height:1300px)
 {
@@ -1208,6 +1273,10 @@ ul#links img
 	#title
 	{
 		margin-top: 1100px;
+	}
+	section div.overflowy
+	{
+		height: 1100px;
 	}
 }
 
