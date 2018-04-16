@@ -20,14 +20,14 @@
 					&#x21E1; Harbor
 				</label>
 			</li><li class="menu-item active">
+				<label for="how">
+					<img src="" alt=""/>
+					How?
+				</label>
+			</li><li class="menu-item active">
 				<label for="what">
 					<img src="" alt=""/>
 					What?
-				</label>
-			</li><li class="menu-item active">
-				<label for="contact">
-					<img src="" alt=""/>
-					Contact
 				</label>
 			</li>
 		</ul>
@@ -38,13 +38,23 @@
 	<form id="fullHolder">
 
 
-<?php include(".contact.php") ?>
-
-
 <input type="radio" id="what" name="nav"/>
 <section>
 	<div class="container">
 		<h1>What</h1>
+		<div class="overflowy">
+		<p><span>Walker</span> remote controlled, partly autonomous hexapod bot @ 3000€</p>
+		<p><span>Mower</span> autonomous lawn mower based on BBB, ArduMower @ 300€</p>
+		<p><span>Manipulator</span> 5 axis robotic industrial arm @ 1000€</p>
+		</div>
+	</div>
+</section>
+
+
+<input type="radio" id="how" name="nav"/>
+<section>
+	<div class="container">
+		<h1>How</h1>
 		<div class="overflowy">
 		<p><span>Eco</span> Our machines shall preserve Nature</p>
 		<p><span>Free &amp; Righteous</span> Our machines shall guarantee freedom, rights, safety</p>
