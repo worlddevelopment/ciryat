@@ -47,7 +47,7 @@
 		<h1>News</h1>
 		<div class="overflowy">
 		<div style="box-shadow: 1px 1px;">
-		<p><span>2018-04-20</span> Machines: Design autonomous blue lawn mower @ <200€</p>
+		<p><span>2018-04-20</span> Machines: Design autonomous blue lawn mower @ 300€ total part cost</p>
 		<p><span>2018-04-15</span> Web: Standardization on Composer + Git overlay</p>
 		<p><span>2018-04-15</span> Web: Standardization on Symfony|Laravel, Flow|Neos, Aimeos</p>
 		<p><span>2018-04-14</span> Riverbridge: Started floor heating construction @ level 1</p>
