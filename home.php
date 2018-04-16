@@ -47,6 +47,7 @@
 		<h1>News</h1>
 		<div class="overflowy">
 		<div style="box-shadow: 1px 1px;">
+		<p><span>2018-05-01</span> Machines: BlueMower: Use wireless perimeter + Sunray</p>
 		<p><span>2018-04-20</span> Machines: Design autonomous blue lawn mower @ 300€ total part cost</p>
 		<p><span>2018-04-15</span> Web: Standardization on Composer + Git overlay</p>
 		<p><span>2018-04-15</span> Web: Standardization on Symfony|Laravel, Flow|Neos, Aimeos</p>
