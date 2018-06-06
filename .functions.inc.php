@@ -217,6 +217,7 @@ function prepDb($toPrep) {
       }
       //
       $qs = preg_replace('/[&]$/', '', addToQS($name, $val, $qs));
+      $qs = preg_replace('/[&]+/', '&', $qs);
       return preg_replace('/([?]([&]|[?]))/', '?', $qs);
   }
 
@@ -614,9 +615,12 @@ function isBinFile($filename) {
      * getLang
      * Ermittelt die gesetzte Sprache
      */
-    function getLang() {
-        return (isset($_GET['lang']) && $_GET['lang'] == 'en' ? 'en' : 'de');
-    }
+    function getLang()
+	{
+		if (!isset($defaultLanguage))
+			$defaultLanguage = 'en';
+		return (empty($_GET['lang']) ? $defaultLanguage : $_GET['lang']);
+	}
 
 
 	function getInt($string) {
