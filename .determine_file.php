@@ -33,7 +33,10 @@
 		//}
 	}
 	// Determine file
-	$file = './'.$directory.$filename.$loggedInAddition.'.php';
+	$lang = getLang();
+	$file = './'.$directory.$lang.'__'.$filename.$loggedInAddition.'.php';
+	if (!file_exists($file))
+		$file = './'.$directory.$filename.$loggedInAddition.'.php';
 	if (!file_exists($file))
 	{
 		if (strpos('.', $filename) !== 0)
