@@ -449,7 +449,7 @@ function replaceInFile($toSearch, $replacement, $pathWithHaystack, $regex = fals
         if (!$herold) {
             echo 'something went wrong regarding: file'.$pathWithHaystack;
         }
-        
+
         return true;
     }
     return false;
@@ -675,6 +675,25 @@ function endsWithNotCaseSensitive($haystack, $needle)
 	$haystack = strtolower($haystack);
 	$needle = strtolower($needle);
 	return endsWith($haystack, $needle);
+}
+
+
+function getTranslationInto($key, $lang)
+{
+	global $menuMap;
+	$key = trim($key);
+	// menuMap is a map from en to de
+	if (getLang() == $lang)
+		return $key;
+	if ('en' == $lang)
+	{
+		$menuMapP = array_flip($menuMap);
+		//echo 'map:'; var_dump($menuMapP);
+		return $menuMapP[$key];
+	}
+	if ('de' == $lang)
+		return $menuMap[$key];
+	return null;
 }
 
 ?>
