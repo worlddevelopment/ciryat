@@ -23,6 +23,16 @@
 
 	// Determine filename
 	$filename = 'home';
+	if (empty($_GET['id']))
+	{
+		$lang = getLang();
+		if ($lang == 'de')
+			$filename = $startDE;
+		else
+			$filename = $startEN;
+		//echo '<div style="position:fixed;top:1px;left:1px;">filename: ' . $filename . '</div>';
+	}
+			// TODO somehow use the above to translate and retranslate
 	if (!empty($_GET['id']))
 	{
 		$filename = preg_replace('/[^-A-Za-z_.]/', '', $_GET['id']);
@@ -33,8 +43,12 @@
 		//}
 	}
 	// Determine file
+	$file = $filename;
+	if (!file_exists($file))
+		$file = $directory.$filename;
 	$lang = getLang();
-	$file = './'.$directory.$lang.'__'.$filename.$loggedInAddition.'.php';
+	if (!file_exists($file))
+		$file = './'.$directory.$lang.'__'.$filename.$loggedInAddition.'.php';
 	if (!file_exists($file))
 		$file = './'.$directory.$filename.$loggedInAddition.'.php';
 	if (!file_exists($file))
