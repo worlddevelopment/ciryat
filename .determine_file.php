@@ -30,7 +30,6 @@
 			$filename = $startDE;
 		else
 			$filename = $startEN;
-		//echo '<div style="position:fixed;top:1px;left:1px;">filename: ' . $filename . '</div>';
 	}
 			// TODO somehow use the above to translate and retranslate
 	if (!empty($_GET['id']))
@@ -42,10 +41,9 @@
 		//	$filename .= $ending;
 		//}
 	}
+	//echo '<div style="position:fixed;top:1px;left:1px;">filename: ' . $filename . '</div>';
 	// Determine file
 	$file = $filename;
-	if (!file_exists($file))
-		$file = $directory.$filename;
 	$lang = getLang();
 	if (!file_exists($file))
 		$file = './'.$directory.$lang.'__'.$filename.$loggedInAddition.'.php';
@@ -82,4 +80,5 @@
 			}
 		}
 	}
+	//echo '<div style="position:fixed;top:11px;left:1px;">file ' . $file . '</div>';
 ?>
