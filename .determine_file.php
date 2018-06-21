@@ -27,9 +27,11 @@
 	{
 		$lang = getLang();
 		if ($lang == 'de')
-			$filename = $startDE;
+			if (!empty($startDE))
+				$filename = $startDE;
 		else
-			$filename = $startEN;
+			if (!empty($startEN))
+				$filename = $startEN;
 	}
 			// TODO somehow use the above to translate and retranslate
 	if (!empty($_GET['id']))
