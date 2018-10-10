@@ -204,15 +204,8 @@ a:hover {
 }
 #footer,
 footer {
+	bottom: .25rem;
 	margin-bottom: 0;
-	background-color: royalblue;
-	background-color: rgb(0, 0, 0);
-	filter: alpha(opacity=50);
-	opacity: .5;
-	padding: 15px 0;
-	color: #fff;
-	font-size: 1rem;
-	font-family:  'NovecentowideLightRegular';
 }
 #footer a,
 footer a {
@@ -223,6 +216,21 @@ footer a {
 footer img {
 		max-height: 50pt;
 }
+footer ul
+{
+	list-style: none;
+}
+
+ul#links
+{
+	position: fixed;
+	right: 3rem;
+	bottom: .25rem;
+	padding: .5rem;
+	text-align: right;
+}
+
+
 input, textarea {
 	border-radius: 0;
 }
@@ -839,16 +847,6 @@ figcaption::before
 	text-shadow: 1px 0px 1px black;
 }
 
-ul#links
-{
-	position: fixed;
-	right: 3rem;
-	bottom: .25rem;
-	padding: .5rem;
-	list-style: none;
-	text-align: right;
-}
-
 ul#links img
 {
 	width: 1rem;
@@ -857,7 +855,7 @@ ul#links img
 ul#links + ul
 {
 	position: fixed;
-	bottom: -.5rem;
+	bottom: .25rem;
 	left: 1rem
 }
 
