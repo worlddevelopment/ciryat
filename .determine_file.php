@@ -47,11 +47,11 @@
 	// Determine file
 	$file = $filename;
 	$lang = getLang();
-	if (!file_exists($file))
+	if (!is_file($file))
 		$file = './'.$directory.$lang.'__'.$filename.$loggedInAddition.'.php';
-	if (!file_exists($file))
+	if (!is_file($file))
 		$file = './'.$directory.$filename.$loggedInAddition.'.php';
-	if (!file_exists($file))
+	if (!is_file($file))
 	{
 		if (strpos('.', $filename) !== 0)
 		{
@@ -63,7 +63,7 @@
 			// toggle (remove dot)
 			$file = './'.$directory.'.'.substr($filename, 1).$loggedInAddition.'.php';
 		}
-		if (!file_exists($file))
+		if (!is_file($file))
 		{
 			// Is it a directory?
 			if (is_dir($filename))
@@ -76,7 +76,7 @@
 			// This is in harmony with what is done in DynamicMenu that creates type=&id=. It's a bonus.
 			// TODO Not forget side effect that filename.php and filename/ no longer can both appear in the menu?
 
-			if (!file_exists($file))
+			if (!is_file($file))
 			{
 				$file = './error404.php';
 			}
