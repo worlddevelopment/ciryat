@@ -57,7 +57,7 @@ Virtually all worlddevelopment machines can help here.
 		<h2>The foremost priority</h2>
 It is not forecast when, what happens. Instead the principle is availability of good, trusted powers.
 		<h2>How exactly shall that work?</h2>
-Combination of trusted cyber and real bot nets. Show presence. Deter. Be there when you are needed like a wizard. Preparedness.
+Combination of trusted cyber (e.g. phone shock detection or "help" listener activatable on demand, e.g. if a female has to pass dark areas) and real bot nets. Show presence. Deter. Be there when you are needed like a wizard. Preparedness.
 		</div>
 	</div>
 </section>
