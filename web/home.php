@@ -22,7 +22,7 @@
 			</li><li class="menu-item active">
 				<label for="news">
 					<img src="" alt=""/>
-					Online Games
+					Remote control
 				</label>
 			</li><li class="menu-item active">
 				<label for="websites">
@@ -48,8 +48,8 @@
 				<li>Option JavaScript (this site does not use it)</li>
 				<li>C++ or other CGI</li>
 				<li>with or without backend</li>
-				<li>backend TYPO3 (preferred) or wordpress or Drupal or other</li>
-				<li>shop system Aimeos (preferred) or Gambio or other</li>
+				<li>backend Neos (preferred) or TYPO3 or Wordpress or Drupal or Laravel based</li>
+				<li>shop system Aimeos (preferred) or comparable</li>
 			</ul>
 		</div>
 	</div>
@@ -59,9 +59,9 @@
 <input type="radio" id="news" name="nav"/>
 <section>
 	<div class="container">
-		<h1>Online Games</h1>
+		<h1>Remote control</h1>
 		<div>
-		Here all tech at hands is employed from local exec + network sync over PHP + JavaScript (AJAX) to HTML5 + WebGL.
+		Industry and home automation combines multiple technologies and thus supersedes automatic booking systems, shops and static websites in complexity. We keep it simple and secure.
 		</div>
 	</div>
 </section>
