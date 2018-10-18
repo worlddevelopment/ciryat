@@ -44,7 +44,7 @@
 		<h1>What</h1>
 		<div class="overflowy">
 		<p><span>Walker</span> remote controlled, partly autonomous hexapod bot @ 3000€</p>
-		<p><span>Mower</span> autonomous lawn mower based on BBB, ArduMower @ 300€</p>
+		<p><span>Mower<a href=".images/mower.jpg"><img src=".images/mower_preview.jpg" alt=""/></a></span> autonomous <b>hedgehog & insect-friendly</b> mower based on BBB @ 400€</p>
 		<p><span>Manipulator</span> 5 axis robotic industrial arm @ 1000€</p>
 		</div>
 	</div>
@@ -67,7 +67,7 @@
 <style type="text/css">
 form#fullHolder section:nth-of-type(3)
 {
-	background-image: url("images/worlddevelopment_inverted_white_only.png");
+	background-image: url(".images/worlddevelopment_inverted_white_only.png");
 }
 </style>
 <?php include(".harbor.php") ?>
