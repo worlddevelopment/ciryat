@@ -47,6 +47,20 @@
 		<h1>News</h1>
 		<div class="overflowy">
 		<div style="box-shadow: 1px 1px;">
+		<!--<p><span>2018-08-15</span> Inter bot communication of several Km</p>-->
+		<p><span>2018-08-15</span> Organize bots in a member system</p>
+		<p><span>2018-08-08</span> Riverbridge: Heating breakthrough. Finally all may fall into place. This is so relieving</p>
+		<p><span>2018-08-01</span> Get universal hydro remote control to work</p>
+		<p><span>2018-07-19</span> Blue rover mows, creates lanes of grass landscape [insert link to video]</p>
+		<p><span>2018-08-15</span> Repair tractor and extinguish sudden giant fire on diesel tank. Thanks to my little brother for instant help</p>
+		<p><span>2018-08-15</span> Fix model car electronics, replace motor after intense testing manoevres</p>
+		<p><span>2018-07-15</span> Organize bots in a member system</p>
+		</div>
+		<div style="box-shadow: 1px 1px;">
+		<p><span>2018-06-19</span> Hilltop: Get rough plaster at northern, eastern walls straight again.</p>
+		<p><span>2018-06-01</span> Riverbridge: Finish flat at level 1</p>
+		</div>
+		<div style="box-shadow: 1px 1px;">
 		<p><span>2018-05-01</span> Machines: BlueMower: Use wireless perimeter + Sunray</p>
 		<p><span>2018-04-20</span> Machines: Design autonomous blue lawn mower @ 300€ total part cost</p>
 		<p><span>2018-04-15</span> Web: Standardization on Composer + Git overlay</p>
