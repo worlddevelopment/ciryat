@@ -47,10 +47,13 @@
 	// Determine file
 	$file = $filename;
 	$lang = getLang();
+	//echo '1file: ' . $file;
 	if (!is_file($file))
 		$file = './'.$directory.$lang.'__'.$filename.$loggedInAddition.'.php';
+	//echo '2file: ' . $file;
 	if (!is_file($file))
 		$file = './'.$directory.$filename.$loggedInAddition.'.php';
+	//echo '3file: ' . $file;
 	if (!is_file($file))
 	{
 		if (strpos('.', $filename) !== 0)
@@ -63,6 +66,7 @@
 			// toggle (remove dot)
 			$file = './'.$directory.'.'.substr($filename, 1).$loggedInAddition.'.php';
 		}
+		//echo 'last chance for a file: ' . $file;
 		if (!is_file($file))
 		{
 			// Is it a directory?
@@ -71,6 +75,12 @@
 				$directory = $filename . '/';
 				$filename = "index";
 			}
+			else if (is_dir($lang . '__' . $filename))
+			{
+				$directory = $lang . '__' . $filename . '/';
+				$filename = "index";
+			}
+			//echo 'is a directory if not empty: ' . $directory;
 			// TODO Check for more file endings (see DynamicMenu).
 			$file = './'.$directory.'/'.$filename.$loggedInAddition.'.php';
 			// This is in harmony with what is done in DynamicMenu that creates type=&id=. It's a bonus.
