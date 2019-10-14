@@ -1,4 +1,3 @@
-
 	<!-- topmost bar | sub nav -->
 	<div id="thumbHolder">
 		<!--
@@ -8,7 +7,7 @@
 			<span class="icon-bar"></span>
 		</button>
 		-->
-		<a href="http://ciry.at">
+		<a href="/">
 			<div id="mini-logo" class="logo">
 				<span>worlddevelopment</span>
 			</div>
@@ -16,17 +15,14 @@
 		<ul class="nav top-nav nav-collapse collapse" id="nav-menu">
 			<li id="menu-item-home" class="menu-item active">
 				<label for="harbor">
-					<img src="" alt=""/>
 					&#x21E1; Harbor
 				</label>
 			</li><li class="menu-item active">
 				<label for="news">
-					<img src="" alt=""/>
 					News
 				</label>
 			</li><li class="menu-item active">
 				<label for="contact">
-					<img src="" alt=""/>
 					Contact
 				</label>
 			</li>
@@ -47,7 +43,20 @@
 		<h1>News</h1>
 		<div class="overflowy">
 		<div style="box-shadow: 1px 1px;">
+		<p><span>2019-10-01</span> New living space construction planning finalised. Up to 16 flats in 2021</p>
+		<p><span>2019-10-01</span> New product: IP web cam outdoor capable security surveillance system with zero hassle history view</p>
+		</div>
+		<div style="box-shadow: 1px 1px;">
 		<!--<p><span>2018-08-15</span> Inter bot communication of several Km</p>-->
+		<p><span>2019-04-27</span> Significant cost reduction, simplification of the versatile waterproof ultra sonic sensor system</p>
+		</div>
+		<div style="box-shadow: 1px 1px;">
+		<p><span>2019-03-26</span> Open Eco club team forms further with skilled charismatic reinforcement</p>
+		<p><span>2019-03-0:</span> Autonomy for flying swarms of snitch, including live map updates</p>
+		<p><span>2019-02-26</span> Remote control: Increase safety by triple redundancy</p>
+		</div>
+		<div style="box-shadow: 1px 1px;">
+		<p><span>2018-12-31</span> Open Eco club sides with veteran engineer friend with big international and technical overall experience</p>
 		<p><span>2018-08-15</span> Organize bots in a member system</p>
 		<p><span>2018-08-08</span> Riverbridge: Heating breakthrough. Finally all may fall into place. This is so relieving</p>
 		<p><span>2018-08-01</span> Get universal hydro remote control to work</p>
@@ -101,7 +110,6 @@
 		<p><span>2017-11-01</span> Think a component selection strategy ensuring modularity for all projects (HAMAG, worlddevelopment, ...)</p>
 		</div>
 		<div style="box-shadow: 1px 1px;">
-		<div style="box-shadow: 1px 1px;">
 		<p><span>2017-10-31</span> Established connection between riverbridge and hilltop</p>
 		</div>
 		<div style="box-shadow: 1px 1px;">
@@ -112,6 +120,7 @@
 		<p><span>2017-10-24</span> Finished steel, wood floor, hatch, construction above cellar (tiles missing)</p>
 		<p><span>2017-10-23</span> Oiled, laid wooden bars on top of hobbit roof</p>
 		</div>
+		<div style="box-shadow: 1px 1px;">
 		<p><span>2017-10-22</span> Finished hobbit hole steel roof construction</p>
 		<p><span>2017-10-21</span> Fetched wooden bars .2 * .1. Ground bars for roof and entry to riverbridge base level 1 (remember old stairs got removed).</p>
 		<p><span>2017-10-21</span> Fetched another pallet of bricks for hobbits</p>
@@ -164,9 +173,15 @@
 		<p><span>2017-spring</span> Finished gate system metal works</p>
 		<p><span>2017-spring</span> Finished brick roundabout</p>
 		</div>
+		</div>
 	</div>
 </section>
 
+
+<?php include(".harbor.php") ?>
+
+
+	</form><!-- main content -End -->
 
 <style type="text/css">
 form#fullHolder section:nth-of-type(3)
@@ -174,8 +189,3 @@ form#fullHolder section:nth-of-type(3)
 	background-image: url(".images/worlddevelopment_inverted_white_only.png");
 }
 </style>
-<?php include(".harbor.php") ?>
-
-
-	</form><!-- main content -End -->
-

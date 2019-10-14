@@ -276,7 +276,7 @@ function toFairy($string) {
         $prepend = ' ';
     }
     $append = '';
-    if (substr($string, count($string) - 1, 1) == '_')
+    if (substr($string, strlen($string) - 1, 1) == '_')
         $append = ' ';
 
     // remove leading . (as it might have been a hidden file e.g. .home.php)
@@ -300,100 +300,131 @@ function toFairy($string) {
 }
 
 
-    /**
-     * @changelog: JRIBW: Now this function no is static. Furthermore now a generic method for
-     * encoding is utilized, so that other planet programs can decode automatically/dynamically.
-     * /
-    private static final int[] unicode = new int[] {
-          0x00E4, 0x00C4
-        , 0x00F6, 0x00D6
-        , 0x00DF
-        , 0x00FC, 0x00DC
+class U /*abbreviation for Umlauts*/
+{
+    private static $unicode = [
+          '00E4', '00C4'
+        , '00F6', '00D6'
+        , '00DF'
+        , '00FC', '00DC'
         //, ' ' <-- we handle this separately because 0x0020 instead of _ will be too long a filepath.
-    };
-//  private static final String[] replacement = new String[]    {
 //            "0ae", "0Ae"
 //          , "0oe", "0Oe"
 //          , "0sz"
 //          , "0ue", "0Ue",
 //          "_"/*PREVIOUSLY THIS WAS replaced by empty""* //* Now replacement is dynamically derived. * /
-//  };
 
+    ];
 
-
-c static String encodeUmlauts(String str) {
-        //str = str.toLowerCase();//<-- this has destroyed information
-
+	function encode($str)
+	{
         /* Leading 0 (zero) was introduced to avoid confusion:
-        e.g. 'Puerto' became P\u00DCrto and Bauer Ba\u00DCr, now this can happen no more. * /
+        e.g. 'Puerto' became P\u00DCrto and Bauer Ba\u00DCr, now this can happen no more. */
 
-        if(str.contains(File.separator)){
-            //-- is category splitter (because single - might be used in the text itself).
-            /* / is replaced by triple - (---) .. hence an empty category will be --<empty>--==----
-              and will not be matched by the ---.
-            * /
-            str = str.replaceAll(File.separator, "---"); /*ATTENTION CHANGED HERE!
-                    TODO KEEP TRACK OF POTENTIAL CONSEQUENCES IF THIS WAS USED SOMEWHERE!
-                    PREVIOUSLY A SLASH (/) WAS REPLACED BY UNDERSCORE (_)* /
+        if (strpos($str, DIRECTORY_SEPARATOR) !== -1)
+		{
+			/*
+            __ is category splitter because single - or _ might be used in the text itself.
+            / is replaced by triple - (---)
+			An empty category will thus be __<empty>__ and will not be matched by the ---.
+            */
+            $str = str_replace(DIRECTORY_SEPARATOR, "---", $str);
         }
-        if(str.contains(" ")){
-            str = str.replaceAll(" ", "_");
+        if (strpos($str, " ") !== -1)
+		{
+            $str = str_replace(" ", "_", $str);
         }
-        String search;
-        String replacement;
-        for (int i = 0; i < unicode.length; i++) {
-            search = String.valueOf(Character.toChars(unicode[i]));
-            search = String.valueOf((char) unicode[i]);
-            //replacement = unicode[i].replaceFirst("\\\\", "");//<--omitting the slash\ is a more generic solution.
-            replacement = "u" + toHexString(unicode[i], 4);//<-- without the u what will happen if üö is to be replaced?-> it will break when decoding.
-            str = str.replaceAll(search, replacement);
+        for ($i = 0; $i < count(self::$unicode); $i++)
+		{
+            $search = 'u' . self::$unicode[$i];
+            $replacement = "u" + hexToString($unicode[$i], 4); // Without the u it what will happen if üö is to be replaced?- it will break when decoding.
+            $str = str_replace($search, $replacement, $str);
         }
-        return str;
+        return $str;
     }
 
-public static String toHexString(long l) {
-        return toHexString(l, 0);
-    }
-    public static String toHexString(long l, int minimum_digit_count) {
-        String hexString = Long.toHexString(l);
-        //fill with leading zeroes
-        while (hexString.length() < minimum_digit_count) {//<-- examined every loop cycle
-            hexString = "0" + hexString;
+
+	function strToHex($string){
+    	$hex = '';
+    	for ($i=0; $i<strlen($string); $i++){
+        	$ord = ord($string[$i]);
+        	$hexCode = dechex($ord);
+        	$hex .= substr('0'.$hexCode, -2);
+			//$hex .= sprintf('%02.x', $ord);
+    	}
+    	return strToUpper($hex);
+	}
+
+
+	function hexToStr($hex){
+    	$string='';
+    	//for ($i=0; $i < strlen($hex)-1; $i+=2){
+			$h = $hex[$i];
+			$hh = $hex[$i+1];
+			//if ($h == '0' && $hh == '0')
+			//	continue;
+//echo $hex;
+        	$string .= chr(hexdec($hex));
+    	//}
+    	return $string;
+	}
+
+
+	static function t($expected, $actual, $success) {
+    	if($expected !== $actual) {
+        	echo "Expected: '$expected'\n";
+        	echo "Actual:   '$actual'\n";
+        	echo "\n";
+        	$success = false;
+    	}
+    	return $success;
+	}
+
+	static function test()
+	{
+		//header('Content-Type: text/plain');
+
+		$success = true;
+		$success = self::t('00', self::strToHex(self::hexToStr('00')), $success);
+		$success = self::t('FF', self::strToHex(self::hexToStr('FF')), $success);
+		$success = self::t('000102FF', self::strToHex(self::hexToStr('000102FF')), $success);
+		$success = self::t('↕↑↔§P↔§P ♫§T↕§↕', self::hexToStr(self::strToHex('↕↑↔§P↔§P ♫§T↕§↕')), $success);
+
+		echo $success ? "Success" : "\nFailed";
+ 	 }
+
+
+    function decode($str)
+	{
+echo $str.'<br/>';
+        if (empty($str))
+		{
+            echo "Umlauts: Decode: Given string is empty<br/>\n";
+            return '';
         }
-        return hexString.toUpperCase();
-    }
-    //
-    public static String decodeUmlauts(String str) {
-        if (str == null) {
-            System.out.println("DecodeUmlauts: Was given " + str);
-            return null;
+        //$str = strtolower($str);
+        if(strpos($str, "---"))
+		{
+            $str = str_replace("---", DIRECTORY_SEPARATOR, $str);
         }
-        //str = str.toLowerCase();
-        if(str.contains("---")){
-            str = str.replaceAll("---", File.separator);
+        if(strpos($str, "_") !== -1)
+		{
+            $str = str_replace("_", " ", $str);
         }
-        if(str.contains("_")){
-            str = str.replaceAll("_", " ");
-        }
-        String search;
-        String replacement;
-        for (int i = 0; i < unicode.length; i++) {
-            //without u multiple chars in a row will break!
-            search = "u" + toHexString(unicode[i], 4).toUpperCase();
-            //leading \?
-//          if (!str.contains("\\\\u")) {
-//              search = unicode[i].replaceFirst("\\\\", "");
-//
-//          }
-            //Long.parseLong(<hex_string>, 16);
-            replacement = String.valueOf((char) unicode[i]);
-            str = str.replaceAll("(?i)" + search, replacement);/*Enable case insensitiveness to replace
-                    both 00e4 and 00E4 as an example.* /
+        for ($i = 0; $i < count(self::$unicode); $i++) {
+            // without u multiple chars in a row will break!
+            $search = "u" . self::$unicode[$i];
+            $replacement = self::hexToStr(self::$unicode[$i]);
+echo 'r:' . $replacement;
+            $str = str_replace($search, $replacement, $str);
+			// TODO Enable case insensitiveness to replace both 00e4 and 00E4 as an example.
         }
 
-        return str;
+        return $str;
     }
-*/
+
+}
+/* class U -End */
 
 
 /**

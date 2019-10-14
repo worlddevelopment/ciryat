@@ -29,6 +29,7 @@ div#wrapper
 	position: relative; /* To be reference for absolute pos of child. */
 }
 
+
 header
 {
 	z-index: 99999;
@@ -767,7 +768,7 @@ div#thumbHolder img
 {
 	cursor: pointer;
 	display: inline;
-	height: 1.5rem;
+	height: 1.2rem;
 	margin: 0 auto;
 	width: auto;
 }
@@ -1131,6 +1132,7 @@ ul#links + ul
 @media (min-height:400px) and (max-height:500px)
 {
 	section
+	,div#wrapper
 	{
 		min-height: 500px;
 	}
@@ -1146,6 +1148,7 @@ ul#links + ul
 @media (min-height:500px) and (max-height:600px)
 {
 	section
+	,div#wrapper
 	{
 		min-height: 600px;
 	}
@@ -1161,6 +1164,7 @@ ul#links + ul
 @media (min-height:600px) and (max-height:700px)
 {
 	section
+	,div#wrapper
 	{
 		min-height: 700px;
 	}
@@ -1176,6 +1180,7 @@ ul#links + ul
 @media (min-height:700px) and (max-height:800px)
 {
 	section
+	,div#wrapper
 	{
 		min-height: 800px;
 	}
@@ -1191,6 +1196,7 @@ ul#links + ul
 @media (min-height:800px) and (max-height:900px)
 {
 	section
+	,div#wrapper
 	{
 		min-height: 900px;
 	}
@@ -1206,6 +1212,7 @@ ul#links + ul
 @media (min-height:900px) and (max-height:1000px)
 {
 	section
+	,div#wrapper
 	{
 		min-height: 1000px;
 	}
@@ -1221,6 +1228,7 @@ ul#links + ul
 @media (min-height:1000px) and (max-height:1100px)
 {
 	section
+	,div#wrapper
 	{
 		min-height: 1100px;
 	}
@@ -1236,6 +1244,7 @@ ul#links + ul
 @media (min-height:1100px) and (max-height:1200px)
 {
 	section
+	,div#wrapper
 	{
 		min-height: 1200px;
 	}
@@ -1251,6 +1260,7 @@ ul#links + ul
 @media (min-height:1200px) and (max-height:1300px)
 {
 	section
+	,div#wrapper
 	{
 		min-height: 1300px;
 	}
@@ -1266,6 +1276,7 @@ ul#links + ul
 @media (min-height:1300px)
 {
 	section
+	,div#wrapper
 	{
 		min-height: 1300px;
 	}

