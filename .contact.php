@@ -1,11 +1,9 @@
 
 <input type="radio" id="contact" name="nav"/>
 <section>
-	<h1>Contact</h1>
+	<h1>Impressum</h1>
 	<div class="container">
-<!--
-		<p>Jan R.I. Fr&uuml;hholz</p>
--->
+		<p>Willi W. Parockinger, Jan R.I. Fr&uuml;hholz</p>
 		<div>The consules of the club board
 		</div>
 <!--
@@ -17,6 +15,7 @@
 		<div>i@ciry.at
 		</div>
 	</div>
+<!--
 	<h1>Impressum</h1>
 	<div class="container">
 		<p>
@@ -24,11 +23,12 @@
 		F&uuml;r Inhalte externer Links kann keine Verantwortung &uuml;bernommen werden.
 		</p>
 	</div>
+-->
 
 	<h1>Datenschutz</h1>
 	<div class="container">
 	IP-Adressen sowie vom Browser übermittelte Daten (beispielsweise Browsertyp/-version, verwendetes Betriebssystem) werden zur Verfolgung von Vergehen gespeichert.
-	Es erfolgt keine Weitergabe an Dritte. Weitere Daten werden nicht erhoben. Weder Cookies noch externe Dienste wie Google Fonts, Analytics oder Piwik werden verwendet. §16 TMG
+	Es erfolgt keine Weitergabe an Dritte. Weitere Daten werden nicht erhoben. Weder Cookies noch externe Dienste.
 	</div>
 </section>
 
