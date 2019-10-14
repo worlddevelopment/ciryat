@@ -1,6 +1,9 @@
 <?php
 	// SWITCH => PAGE TO LOAD
-	require('./.determine_file.php');
+	//echo 'dir: ' . $dir . ' cwd: ' . getcwd() .'<br/>';
+	$dir = dirname(__FILE__);
+	//echo 'dir: ' . $dir;
+	require($dir . '/.determine_file.php');
 
 
 	// Escape unreliable input for HTM as it is put out as heading.
@@ -16,7 +19,7 @@
 	</div>
 	<footer>
 <?php
-	require('footer.php');
+	require($dir . '/footer.php');
 ?>
 	</footer>
 

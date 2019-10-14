@@ -1,27 +1,16 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" xmlns:fb="http://ogp.me/ns/fb#">
 <head>
+<meta property="og:image" content="http://ciry.at/.images/team.png" />
+<meta property="og:image:width" content="777"/>
+<meta property="og:image:height" content="576"/>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="A world development open eco club with board ethics instead of hierarchies." />
-	<meta name="keywords" content="ciryat, free, open, economy, ecology, technology, machines, bots, security" />
-	<meta name="audience" content="All" />
-	<meta name="author" content="worlddevelopment" />
-	<meta name="publisher" content="worlddevelopment" />
-	<meta name="Robots" content="index,follow" />
-	<meta name="revisit-after" content="1 Day" />
-	<meta name="Language" content="English" />
-	<meta name="Content-Language" content="en" />
-	<link rel="shortcut icon" href=".images/unicorn_love.png">
+<?php
+include(".metadata.php");
+?>
 	<link rel="stylesheet" href="./.css/style.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="./.css/fairyclasses.css" type="text/css" media="screen">
-	<style>
-	/*<![CDATA[*/
-
-	/*]]>*/
-	</style>
-	<title>worlddevelopment</title>
 </head>
 <body>
 
@@ -29,7 +18,7 @@
 <div id="wrapper">
 
 <?php
-require_once("./body.tpl.php");
+require_once(dirname(__FILE__) . "/body.tpl.php");
 ?>
 
 
